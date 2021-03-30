@@ -97,6 +97,7 @@
 	  .form-control.is-invalid,
 	  .form-control.is-invalid ~ button.password-show-hide {
 	    border-color: rgb(250,135,137);
+      font-size: 14px;
 	  }
 	  .form-control.is-valid:focus,
 	  .form-control.is-valid:focus ~ button.password-show-hide {
@@ -193,7 +194,7 @@
 		border-bottom: #CED4DA solid 1px;
 	    border-radius: 0;
 		transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-	  }  
+	  }
 
     .spinner {
       border: 3px solid #f3f3f3;
@@ -400,7 +401,7 @@
 				<form onkeypress="formKeyPressed(event, this)">
 					<div class="form-group">
 						<label class="col-form-label" for="signup-joining-code">
-							Joining Code: 
+							Joining Code:
 							<a id="joining-info" target="_blank"><svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.024 2.724c-.96 0-1.752.78-1.752 1.752a.443.443 0 10.888 0c0-.468.384-.852.852-.852.492 0 .852.348.852.816v.036c0 .264-.072.888-.924 1.02a.452.452 0 00-.384.444v1.212a.443.443 0 10.888 0V6.3c1.128-.348 1.308-1.32 1.308-1.86.024-.96-.768-1.716-1.728-1.716zM6.024 8.136a.576.576 0 00-.576.576c0 .312.264.576.576.576a.584.584 0 00.576-.576.584.584 0 00-.576-.576z" fill="#606C8B"/><path d="M6.024.096A5.864 5.864 0 00.168 5.952a5.864 5.864 0 005.856 5.856 5.864 5.864 0 005.856-5.856A5.864 5.864 0 006.024.096zm0 10.824a4.978 4.978 0 01-4.968-4.968A4.978 4.978 0 016.024.984a4.978 4.978 0 014.968 4.968C10.98 8.688 8.76 10.92 6.024 10.92z" fill="#606C8B"/></svg></a>
 						</label>
 						<input type="text" class="form-control" id="signup-joining-code" onBlur="onInputBlur(this)">
@@ -731,7 +732,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	
+
 	<script type="text/javascript">
 		let $signin = $("#sign-in");
 		let $signup = $("#sign-up");
@@ -740,11 +741,11 @@
 		  window.expect = "signin";
       window.clearErrorMessage();
 		  $signin.show();
-		  $signup.hide();      
+		  $signup.hide();
     }
     window.showSignUp = function () {
 		  window.expect = "signup";
-      window.clearErrorMessage();   
+      window.clearErrorMessage();
 		  $signin.hide();
 		  $signup.show();
     }
@@ -770,7 +771,7 @@
 
       $submitError.text('')
       $submitError.hide()
-    }    
+    }
 
     window.showSpinner = function () {
       const $loginSpinner = $('#login-spinner')
@@ -781,7 +782,7 @@
 
       if ($submitSpinner) {
         $submitSpinner.addClass('spinner')
-      }      
+      }
     }
 
     window.hideSpinner = function () {
@@ -793,7 +794,7 @@
 
       if ($submitSpinner) {
         $submitSpinner.removeClass('spinner')
-      }      
+      }
     }
 
 		const url_params = new URLSearchParams(window.location.search);
@@ -869,7 +870,7 @@
 						inputElement.classList.remove("is-valid");
 					}
 				}
-				
+
 			}
 			if (allValid) {
 				formElement.classList.add("all-valid");
@@ -879,7 +880,7 @@
 
 			return allValid;
 		}
-		
+
 		window.resetForms = function () {
 			for (const inputElement of document.getElementsByClassName("form-control")) {
 				inputElement.classList.remove("is-valid");
@@ -925,7 +926,7 @@
         console.error( String(err) );
       }
       window.client = client;
-  })();    
+  })();
   </script>
     </body>
 </html>
